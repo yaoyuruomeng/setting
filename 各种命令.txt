@@ -1,0 +1,124 @@
+1、悬赏放神的脚本
+韩文 /usr/local/php/bin/php /opt/htdocs/samgukjimobile/daemon/clsNpcGenerator.php godBoss 神id
+携带 /usr/local/php/bin/php /opt/htdocs/sangokumobile/daemon/clsNpcGenerator.php godBoss 神id
+
+2、对比数据库结构
+//vim /opt/htdocs/sangokumobile/vendors/shells/t.php
+携带：
+/usr/local/php/bin/php /opt/htdocs/sangokumobile/cake/console/cake.php t
+
+cake dbdiff
+
+3、武斗脚本
+执行创建武斗大赛命令
+韩文 /usr/local/php/bin/php /opt/htdocs/samgukjimobile/cake/console/cake.php pkContest start
+携带 /usr/local/php/bin/php /opt/htdocs/sangokumobile/cake/console/cake.php pkContest start
+ 
+报名
+enroll 2 7001 7051
+
+筛选与分组
+group
+
+点将脚本 循环 最多8轮
+select
+
+比赛 循环 最多8轮
+match
+
+4、强力清缓存
+ ps -ef | grep memcache
+
+ kill -9 15836
+
+ /usr/local/memcached/bin/memcached -d -m 512 -u root -c 8192 -P /tmp/memcached2.pid -l 10.103.252.34 -p 11212
+
+5、武斗积分和排名脚本
+韩文 /usr/local/php/bin/php /opt/htdocs/samgukjimobile/cake/console/cake.php rank
+携带 /usr/local/php/bin/php /opt/htdocs/sangokumobile/cake/console/cake.php rank
+
+6、/opt/source/samgukji_mobile/trunk/php/cake/libs/router.php 此文件要更新
+
+7、小boss脚本
+携带 /usr/local/php/bin/php /opt/htdocs/sangokumobile/daemon/clsNormalBoss.php genNormalBoss
+韩文 /usr/local/php/bin/php /opt/htdocs/samgukjimobile/daemon/clsNormalBoss.php genNormalBoss
+
+8、加所有套装
+INSERT INTO `players_items` (`id`, `player_id`, `item_id`, `item_num`, `item_use`) VALUES 
+(NULL, '99413', '7012', '1', '0'),
+(NULL, '99413', '7013', '1', '0'),
+(NULL, '99413', '7014', '1', '0'),
+(NULL, '99413', '7015', '1', '0'),
+(NULL, '99413', '7016', '1', '0'),
+(NULL, '99413', '7017', '1', '0'),
+(NULL, '99413', '7018', '1', '0'),
+(NULL, '99413', '7019', '1', '0'),
+(NULL, '99413', '7020', '1', '0'),
+(NULL, '99413', '7021', '1', '0'),
+(NULL, '99413', '7022', '1', '0'),
+(NULL, '99413', '7023', '1', '0'),
+(NULL, '99413', '2302', '1', '0'),
+(NULL, '99413', '2303', '1', '0'),
+(NULL, '99413', '2304', '1', '0')
+
+9、
+UPDATE  `players_anniversary_materials` SET  `count` =  '1' WHERE  `player_id` =8;
+
+10、调试 Chrome浏览器
+ChromePhp::log('xxxxxx');//打印
+
+11、帮会排名脚本
+携带 /usr/local/php/bin/php /opt/htdocs/sangokumobile/cake/console/cake.php guildRank
+
+12、自动登陆脚本
+携带 /usr/local/php/bin/php /opt/htdocs/sangokumobile/cake/console/cake.php playerDailyLogin
+
+13、对比数据库结构
+
+vim /opt/htdocs/sangokumobile/vendors/shells/t.php
+
+/usr/local/php/bin/php /opt/htdocs/sangokumobile/cake/console/cake.php t
+
+cake dbdiff
+
+14、group_concat mysql输出成字符串
+
+15、城战勇士脚本，战报
+/usr/local/php/bin/php /opt/htdocs/sangokumobile/cake/console/cake.php cityBattleRank
+
+16、打印log
+./tlog
+
+17、
+查看所有脚本 crontab -l
+添加脚本 crontab -e
+
+ifconfig
+
+
+php重启命令：
+ /etc/init.d/php-fpm restart
+
+/etc/init.d/php-fpm reload
+
+用这个可以重新加载配置
+
+nginx重启
+ps -ef | grep nginx
+
+/usr/local/nginx/sbin/nginx -s reload
+
+
+修改密码命令
+
+passwd
+
+
+redis 命令：
+链接redis /usr/local/redis/src/redis-cli
+
+切换db select db
+
+keys *
+
+

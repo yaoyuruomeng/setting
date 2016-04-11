@@ -1,0 +1,64 @@
+携带
+http://203.90.248.60:29832/
+panlong / mysql@pl
+
+服务器选  staging-db-2(192.168.180.237)
+panlong / mysql@pl
+
+----------------------------
+
+韩文
+http://203.90.248.60:29932/
+staging-db-4(192.168.180.239)
+panlong / mysql@pl
+
+http://cs.sangokumobile.jp/mgmts/
+http://cs.samgukjimobile.com/mgmts/
+http://cs.titansmobile.com/mgmts/
+
+user
+Sanguo2010
+
+panlong
+MDeKXfN3
+
+http://203.90.248.60:29832/
+panlong / mysql@pl
+
+http://cs.titansmobile.com/players/clearCache/panlongyouipad
+
+cs.sangokumobile.jp/players/clearCache/panlongyouipad
+
+cs.samgukjimobile.com/players/clearCache/dianshi
+
+日服 新的给测试玩家的服务器。。一共4台。
+
+nginx
+ssh -p 20225 203.90.248.60
+php
+ssh -p 20230 203.90.248.60
+memcache
+ssh -p 20235 203.90.248.60
+mysql
+ssh -p 20240 203.90.248.60
+
+
+公网 203.90.248.89
+域名
+游戏入口 s.app.sangokumobile.jp
+CDN s.cdn.sangokumobile.jp
+支付 应该不用了。
+
+
+
+天天的数据库帐号
+wangyaojun / mysql@wyj
+
+nba_fantasy_1
+nba_fantasy_2
+nba_fantasy_share
+nba_fantasy_logs
+
+http://124.251.4.240:11288/  地址
+
+页面有个第一层密码 我再给你  user / nba
