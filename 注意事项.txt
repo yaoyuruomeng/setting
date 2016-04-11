@@ -1,0 +1,44 @@
+1¡¢ajax£º$playerId = $this->PlayerIndex->_getPlayerIdByPlayerMac($playerMac);
+
+2¡¢Ìø×ªjs D.go(url);
+
+3¡¢ajax
+
+get http://www.w3school.com.cn/jquery/ajax_get.asp
+
+post http://www.w3school.com.cn/jquery/ajax_post.asp
+        $.post(url,{"general_arr":Z.GeneralArr},function(data){
+          if(data.result == 'success'){
+            location.href = '/cityOutpostBattles/march';
+          }else{
+            $('#alert_of_go').hide();
+            $('#error_alert_text').html(data.msg);
+            $('#error_alert').show();
+            fnVerticalMiddle('error_alert');
+          }
+        },'json');
+4¡¢set
+http://book.cakephp.org/1.3/en/The-Manual/Core-Utility-Libraries/Set.html
+
+5¡¢ÅÅÃûsql
+
+SELECT  @rank:=@rank+1 rank, player_id FROM  players_puzzle2015_integrals, (SELECT @rank:=0) t WHERE integral>100 ORDER BY integral DESC, update_time ASC;
+
+
+
+SELECT a . * , b.name AS c_name, c.short_name
+FROM  `member_match_datas` AS a, members AS b, teams AS c
+WHERE c.id = b.team_id
+AND a.member_id = b.id
+
+
+
+SELECT a.member_id,b.name,b.e_name 
+FROM  `member_daily_score_logs` as a,members as b
+WHERE  `info` =  '' and a.member_id = b.id
+
+
+SELECT a. * , b.`short_name` AS host_name
+FROM  `match_maps` AS a, teams AS b
+WHERE  `start_time` >=  '2016-01-01'
+AND a.host_id = b.id
